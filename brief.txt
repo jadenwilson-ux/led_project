@@ -1,0 +1,12 @@
+What are LEDs?
+An LED, short for light emitting diode, is an electronic component that emits light when
+current flows through it. LEDs come in a variety of colours, and are widely used in many
+fields and applications.
+
+What is Ohm's Law?
+Ohm's Law states that the voltage across a conductor between two points is equal to the
+current through the conductor multiplied by the conductor's resistance, thus, Ohm's Law
+can be expressed as V = I * R.
+
+How can we calculate the appropriate resistor for an LED?
+First, determine the supplied voltage of the power source (battery). Then...
