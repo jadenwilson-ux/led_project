@@ -9,4 +9,8 @@ current through the conductor multiplied by the conductor's resistance, thus, Oh
 can be expressed as V = I * R.
 
 How can we calculate the appropriate resistor for an LED?
-First, determine the supplied voltage of the power source (battery). Then...
+Every circuit will have one voltage source that supplies a voltage of either 3 V or 5 V.
+Without a resistor current will be extremely high since I = V / R, thus a resistor must
+be added to the circuit to reduce current and prevent the LED from overheating. Your goal
+is to determine an appropriate resistance for the resistor that will prevent the LED from
+overheating, but still allow the LED to light up.

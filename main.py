@@ -20,3 +20,7 @@ while True:
     except IndexError:
         print("The number you entered was invalid. Please try again, or press 0 to exit the menu.")
 
+with open("datavalues.txt", "r") as f:
+    content = f.read()
+print(content)
+
