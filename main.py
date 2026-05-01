@@ -1,5 +1,14 @@
+import json
+
+class Circuit:
+    def __init__(self, circuit, terminal_voltage, led_fwd_voltage, question):
+        self.circuit = circuit
+        self.terminal_voltage = terminal_voltage
+        self.lew_fwd_voltage = led_fwd_voltage
+        self.question = question
+
 # Introduction
-name = input("Hello and welcome to the interactive LED tool, please enter your name: ")
+'''name = input("Hello and welcome to the interactive LED tool, please enter your name: ")
 
 with open("brief.txt", "r") as f:
     content = f.read()
@@ -19,8 +28,15 @@ while True:
         print("You did not enter an integer. Please try again, or press 0 to exit the menu.")
     except IndexError:
         print("The number you entered was invalid. Please try again, or press 0 to exit the menu.")
+'''
+with open("datavalues.json", "r") as f:
+    data = json.load(f)
 
-with open("datavalues.txt", "r") as f:
-    content = f.read()
-print(content)
+tasks = []
+for i in range(len(data)):
+    d = data[i]
+    tasks.append(Circuit(d["circuit"], d["terminal_voltage"], d["led_fwd_voltage"], d["question"]))
+print(tasks)
+
+
 

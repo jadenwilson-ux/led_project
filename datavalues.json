@@ -1,30 +1,30 @@
 [
   {
-    "name": "Circuit 01",
+    "circuit": "Circuit 01",
     "terminal_voltage": 3,
     "led_fwd_voltage": 2.2,
     "question": "Calculate the appropriate resistance to use"
   },
   {
-    "name": "Circuit 02",
+    "circuit": "Circuit 02",
     "terminal_voltage": 0,
     "led_fwd_voltage": 0,
     "question": "abc"
   },
   {
-    "name": "Circuit 03",
+    "circuit": "Circuit 03",
     "terminal_voltage": 0,
     "led_fwd_voltage": 0,
     "question": "abc"
   },
   {
-    "name": "Circuit 04",
+    "circuit": "Circuit 04",
     "terminal_voltage": 0,
     "led_fwd_voltage": 0,
     "question": "abc"
   },
   {
-    "name": "Circuit 05",
+    "circuit": "Circuit 05",
     "terminal_voltage": 0,
     "led_fwd_voltage": 0,
     "question": "abc"
