@@ -1,32 +1,47 @@
 [
   {
-    "circuit": "Circuit 01",
+    "name": "Circuit 01",
+    "terminal_voltage": 5,
+    "led_fwd_voltage": 2.2,
+    "current": 0.02,
+    "resistance": "x",
+    "question": "Using the given values, calculate the resistor's appropriate resistance",
+    "hint": "Find the voltage across the resistor, then divide by current"
+  },
+  {
+    "name": "Circuit 02",
+    "terminal_voltage": 12,
+    "led_fwd_voltage": 1.8,
+    "current": 0.015,
+    "resistance": "x",
+    "question": "Using the given values, calculate the resistor's appropriate resistance",
+    "hint": "Find the voltage across the resistor, then divide by current"
+  },
+  {
+    "name": "Circuit 03",
     "terminal_voltage": 3,
     "led_fwd_voltage": 2.2,
-    "question": "Calculate the appropriate resistance to use"
+    "current": "x",
+    "resistance": 40,
+    "question": "Using the given values, calculate the circuits forward current",
+    "hint": "Find the voltage across the resistor, then divide by resistance"
   },
   {
-    "circuit": "Circuit 02",
-    "terminal_voltage": 0,
-    "led_fwd_voltage": 0,
-    "question": "abc"
+    "name": "Circuit 04",
+    "terminal_voltage": 20,
+    "led_fwd_voltage": 2,
+    "current": "x",
+    "resistance": 120,
+    "question": "Using the given values, calculate the circuits forward current",
+    "hint": "Find the voltage across the resistor, then divide by resistance"
   },
   {
-    "circuit": "Circuit 03",
-    "terminal_voltage": 0,
-    "led_fwd_voltage": 0,
-    "question": "abc"
-  },
-  {
-    "circuit": "Circuit 04",
-    "terminal_voltage": 0,
-    "led_fwd_voltage": 0,
-    "question": "abc"
-  },
-  {
-    "circuit": "Circuit 05",
-    "terminal_voltage": 0,
-    "led_fwd_voltage": 0,
-    "question": "abc"
+    "name": "Circuit 05",
+    "terminal_voltage": 9,
+    "led_fwd_voltage": 3.2,
+    "current": 0.03,
+    "resistance": "x",
+    "question": "Using the given values, calculate the resistor's appropriate resistance (to 3 sig figs)",
+    "hint": "Find the voltage across the resistor, divide by current, then round to 3 s.f."
   }
 ]
