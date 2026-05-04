@@ -11,7 +11,7 @@ paragraphs = content.split("\n\n")
 print("To exit the menu press 0")
 print("To learn about LEDs press 1")
 print("To learn about Ohm's Law press 2")
-print("To calculate the appropriate resistor press 3")
+print("To learn more about the questions press 3")
 # Looping the menu until users are satisfied and press 0 to exit the menu
 while True:
     try:
