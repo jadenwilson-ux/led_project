@@ -11,19 +11,20 @@ class Circuit:
         self.question = question
         self.hint = hint
 
-    # Determining the voltage across the reisistor
+    # Determining the voltage across the resistor
     def voltage_resistor(self):
-        return (self.terminal_voltage - self.led_fwd_voltage)
+        return self.terminal_voltage - self.led_fwd_voltage
 
     # Calculating the circuit's forward current if resistance is given
     def calculate_current(self):
-        return (self.voltage_resistor() / self.resistance)
+        print(self.voltage_resistor() / self.resistance)
+        return self.voltage_resistor() / self.resistance
 
     # Calculating the resistor's resistance if forward current is given
     def calculate_resistance(self):
-        return (self.voltage_resistor() / self.current)
+        return self.voltage_resistor() / self.current
 
-    # Determining the correct answer depending which value was unknown
+    # Determining the correct answer depending on which value was unknown
     def answer(self):
         if self.current == "x":
             return self.calculate_current()
@@ -49,7 +50,7 @@ def load_circuits(file):
     with open(file, "r") as f:
         data = json.load(f)
 
-    circuits = []
+    circuit_objects = []
     for item in data:
         circuit = Circuit(
             item["name"],
@@ -60,12 +61,14 @@ def load_circuits(file):
             item["question"],
             item["hint"]
         )
-        circuits.append(circuit)
+        circuit_objects.append(circuit)
 
-    return circuits
+    return circuit_objects
 
 # Running the main quiz, TESTING POINT: CHANGE ans FROM int TO float
 def run_quiz(circuits):
+    score = 0
+    hints_used = 0
     for circuit in circuits:
         print(circuit.name)
         circuit.read_question()
@@ -76,13 +79,15 @@ def run_quiz(circuits):
                     print("Congratulations, your answer is correct!")
                     print("Press any key to continue, or 0 to exit the program.")
                     decision = input("> ")
+                    score += 1
                     break
                 else:
                     print("Your answer is incorrect.")
-                    print("press any key to coninue, h for a hint, or 0 to exit the program.")
+                    print("Press any key to continue, h for a hint, or 0 to exit the program.")
                     decision = input("> ").lower()
                     if decision == "h":
                         circuit.read_hint()
+                        hints_used += 1
                     else:
                         break
             except ValueError:
@@ -91,6 +96,8 @@ def run_quiz(circuits):
             break
         else:
             pass
+
+    return score, hints_used
         
 if __name__ == "__main__":
     circuits = load_circuits("datavalues.json")
