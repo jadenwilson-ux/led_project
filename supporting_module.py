@@ -13,12 +13,14 @@ class Circuit:
 
     # Determining the voltage across the resistor
     def voltage_resistor(self):
-        return self.terminal_voltage - self.led_fwd_voltage
+        if self.terminal_voltage == "x":
+            return self.current * self.resistance
+        else:
+            return self.terminal_voltage - self.led_fwd_voltage
 
     # Calculating the circuit's forward current if resistance is given
-    def calculate_current(self):
-        print(self.voltage_resistor() / self.resistance)
-        return self.voltage_resistor() / self.resistance
+    def calculate_supply_voltage(self):
+        return self.voltage_resistor() + self.led_fwd_voltage
 
     # Calculating the resistor's resistance if forward current is given
     def calculate_resistance(self):
@@ -26,19 +28,19 @@ class Circuit:
 
     # Determining the correct answer depending on which value was unknown
     def answer(self):
-        if self.current == "x":
-            return self.calculate_current()
+        if self.terminal_voltage == "x":
+            return self.calculate_supply_voltage()
         else:
             return self.calculate_resistance()
 
     # Reading the question to the user
     def read_question(self):
-            print(f"Terminal voltage: {self.terminal_voltage}")
             print(f"LED forward voltage: {self.led_fwd_voltage}")
-            if self.current == "x":
+            print(f"Forward current: {self.current}")
+            if self.terminal_voltage == "x":
                 print(f"Resistance: {self.resistance}")
             else:
-                print(f"Current: {self.current}")
+                print(f"Terminal voltage: {self.terminal_voltage}")
             print(self.question)
             
     # Reading the hint if users request it
