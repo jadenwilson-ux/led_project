@@ -8,9 +8,8 @@ Ohm's Law states that the voltage across a conductor between two points is equal
 current through the conductor multiplied by the conductor's resistance, thus, Ohm's Law
 can be expressed as V = I * R.
 
-How can we calculate the appropriate resistor for an LED?
-Every circuit will have one voltage source that supplies a voltage of either 3 V or 5 V.
-Without a resistor current will be extremely high since I = V / R, thus a resistor must
-be added to the circuit to reduce current and prevent the LED from overheating. Your goal
-is to determine an appropriate resistance for the resistor that will prevent the LED from
-overheating, but still allow the LED to light up.
+How do I use this program?
+For each question you will be given the LED forward voltage and forward current. You will
+also be given either the supplied voltage or the resistance, and it is your task to 
+determine the unknown value using Ohm's Law. If you are ever stuck on a question, press h
+and a hint will guide you on how to solve the question.
