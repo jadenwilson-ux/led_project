@@ -19,19 +19,19 @@
   },
   {
     "name": "Circuit 03",
-    "terminal_voltage": 3,
+    "terminal_voltage": "x",
     "led_fwd_voltage": 2.2,
-    "current": "x",
+    "current": 0.02,
     "resistance": 40,
-    "question": "Using the given values, calculate the circuits forward current",
-    "hint": "Find the voltage across the resistor, then divide by resistance"
+    "question": "Using the given values, calculate the appropriate supply voltage",
+    "hint": "Multiply current by resistance to find the voltage across the resistor, then add the LED forward voltage"
   },
   {
     "name": "Circuit 04",
-    "terminal_voltage": 20,
+    "terminal_voltage": "x",
     "led_fwd_voltage": 2,
-    "current": "x",
-    "resistance": 120,
+    "current": 0.02,
+    "resistance": 150,
     "question": "Using the given values, calculate the circuits forward current",
     "hint": "Find the voltage across the resistor, then divide by resistance"
   },
