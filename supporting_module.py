@@ -85,7 +85,7 @@ def run_quiz(circuits):
                     break
                 else:
                     print("Your answer is incorrect.")
-                    print("Press any key to continue, h for a hint, or 0 to exit the program.")
+                    print("Press any key to continue, h for a hint and to retry, or 0 to exit the program.")
                     decision = input("> ").lower()
                     if decision == "h":
                         circuit.read_hint()
@@ -103,4 +103,6 @@ def run_quiz(circuits):
         
 if __name__ == "__main__":
     circuits = load_circuits("datavalues.json")
-    run_quiz(circuits)
+    score, hints_used = run_quiz(circuits)
+    print(score)
+    print(hints_used)
