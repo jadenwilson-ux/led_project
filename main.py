@@ -16,7 +16,7 @@ print("To learn more about the questions press 3")
 # Looping the menu until users are satisfied and press 0 to exit the menu
 while True:
     try:
-        selection = int(input("> "))
+        selection = abs(int(input("> ")))
         if selection == 0:
             break
         else:
