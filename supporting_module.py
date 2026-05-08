@@ -20,11 +20,11 @@ class Circuit:
 
     # Calculating the circuit's forward current if resistance is given
     def calculate_supply_voltage(self):
-        return self.voltage_resistor() + self.led_fwd_voltage
+        return float(self.voltage_resistor() + self.led_fwd_voltage)
 
     # Calculating the resistor's resistance if forward current is given
     def calculate_resistance(self):
-        return self.voltage_resistor() / self.current
+        return float(self.voltage_resistor() / self.current)
 
     # Determining the correct answer depending on which value was unknown
     def answer(self):
