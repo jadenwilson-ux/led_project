@@ -39,7 +39,7 @@
     "name": "Circuit 05",
     "terminal_voltage": 9,
     "led_fwd_voltage": 3.2,
-    "current": 0.03,
+    "current": 0.025,
     "resistance": "x",
     "question": "Using the given values, calculate the resistor's appropriate resistance (to 3 sig figs)",
     "hint": "Find the voltage across the resistor, divide by current, then round to 3 s.f."
