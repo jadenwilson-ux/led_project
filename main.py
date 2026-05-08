@@ -1,13 +1,14 @@
 import supporting_module
 
-# Introduction
-name = input("Hello and welcome to the interactive LED tool, please enter your name: ")
+# --- Introduction Section ---
+name = input("Hello and welcome to a program designed to test your knowledge of LEDs! Please enter your name\n> ")
 
 # Opening brief.txt and parsing its paragraphs into a list
 with open("brief.txt", "r") as f:
     content = f.read()
 paragraphs = content.split("\n\n")
 
+# Printing the menu options to the user
 print("To exit the menu press 0")
 print("To learn about LEDs press 1")
 print("To learn about Ohm's Law press 2")
@@ -25,7 +26,9 @@ while True:
     except IndexError:
         print("The number you entered was invalid. Please try again, or press 0 to exit the menu.")
 
+# Running the main test using the functions and classes defined in supporting_module.py
 circuits = supporting_module.load_circuits("datavalues.json")
 score, hints_used = supporting_module.run_quiz(circuits)
-print(score)
-print(hints_used)
+
+# Printing test results and concluding the program
+print(f"Thank you for using my program {name}! You scored {score}/{len(circuits)} and used {hints_used} hints.")
