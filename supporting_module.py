@@ -77,7 +77,7 @@ def run_quiz(circuits):
         while True:
             try:
                 ans = float(input("Enter your answer (units not required)\n> "))
-                if ans == circuit.answer():
+                if ans == round(circuit.answer(), 0):
                     print("Congratulations, your answer is correct!")
                     print("Press any key to continue, or 0 to exit the program.")
                     decision = input("> ")
