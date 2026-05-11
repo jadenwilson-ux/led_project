@@ -67,7 +67,7 @@ def load_circuits(file):
 
     return circuit_objects
 
-# Running the main quiz, TESTING POINT: CHANGE ans FROM int TO float
+# Main function, running a test on the input list of circuit objects
 def run_quiz(circuits):
     score = 0
     hints_used = 0
