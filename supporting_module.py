@@ -1,6 +1,6 @@
 import json
 
-# Creating a class to store circuits as objects
+# Creating a class to store circuit data as objects
 class Circuit:
     def __init__(self, name, terminal_voltage, led_fwd_voltage, current, resistance, question, hint):
         self.name = name
@@ -18,11 +18,11 @@ class Circuit:
         else:
             return self.terminal_voltage - self.led_fwd_voltage
 
-    # Calculating the circuit's forward current if resistance is given
+    # Calculating the appropriate supply voltage if resistance is given
     def calculate_supply_voltage(self):
         return float(self.voltage_resistor() + self.led_fwd_voltage)
 
-    # Calculating the resistor's resistance if forward current is given
+    # Calculating the appropriate resistance if supply voltage is given
     def calculate_resistance(self):
         return float(self.voltage_resistor() / self.current)
 
@@ -47,7 +47,7 @@ class Circuit:
     def read_hint(self):
         print(self.hint)
 
-# Unpacking data from the JSON file with circuit information
+# Unpacking circuit data from a JSON file and storing that data as objects in a list
 def load_circuits(file):
     with open(file, "r") as f:
         data = json.load(f)
@@ -67,7 +67,7 @@ def load_circuits(file):
 
     return circuit_objects
 
-# Main function, running a test on the input list of circuit objects
+# Running the main test on a list of circuit objects
 def run_quiz(circuits):
     score = 0
     hints_used = 0
@@ -100,7 +100,7 @@ def run_quiz(circuits):
             pass
 
     return score, hints_used
-        
+
 if __name__ == "__main__":
     circuits = load_circuits("datavalues.json")
     score, hints_used = run_quiz(circuits)
