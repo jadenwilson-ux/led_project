@@ -41,7 +41,7 @@
     "led_fwd_voltage": 3.2,
     "current": 0.025,
     "resistance": "x",
-    "question": "Using the given values, calculate the resistor's appropriate resistance (to 3 sig figs)",
-    "hint": "Find the voltage across the resistor, divide by current, then round to 3 s.f."
+    "question": "Using the given values, calculate the resistor's appropriate resistance",
+    "hint": "Find the voltage across the resistor, then divide by current"
   }
 ]
