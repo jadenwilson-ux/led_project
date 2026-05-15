@@ -33,7 +33,7 @@
     "current": 0.02,
     "resistance": 150,
     "question": "Using the given values, calculate the circuits forward current",
-    "hint": "Find the voltage across the resistor, then divide by resistance"
+    "hint": "Multiply current by resistance to find the voltage across the resistor, then add the LED forward voltage"
   },
   {
     "name": "Circuit 05",
